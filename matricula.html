@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polyglot - Nova Matrícula</title>
+    <link rel="stylesheet" href="matricula.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<header class="top-header">
+    <div class="logo">
+        <i class="fa-solid fa-user-plus" style="color: #afbbea;"></i>
+        NOVA MATRÍCULA
+    </div>
+    <nav class="main-nav">
+        <a href="index.html">Voltar</a>
+    </nav>
+</header>
+
+<div class="app-container">
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h3>Processo de Matrícula</h3>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="#dados-aluno" class="nav-item active">
+                <i class="fas fa-user-plus"></i> Dados Pessoais
+            </a>
+            <a href="#selecao-curso" class="nav-item">
+                <i class="fas fa-book-open"></i> Seleção de Curso
+            </a>
+            <a href="#escolha-turma" class="nav-item">
+                <i class="fas fa-clock"></i> Escolha de Turma
+            </a>
+            <a href="#pagamento" class="nav-item">
+                <i class="fas fa-credit-card"></i> Pagamento
+            </a>
+        </nav>
+    </aside>
+
+    <main class="content-area">
+        <h1>Registro de Nova Matrícula</h1>
+        <p class="subtitle">Preencha os dados e escolha o curso e a turma.</p>
+
+        <section id="dados-aluno" class="section-card">
+            <h3><i class="fas fa-id-card"></i> Dados Pessoais do Aluno</h3>
+
+            <form id="novoAlunoForm">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label for="nomeAluno">Nome Completo</label>
+                        <input type="text" id="nomeAluno" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="cpfAluno">CPF</label>
+                        <input type="text" id="cpfAluno" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="emailAluno">E-mail</label>
+                        <input type="email" id="emailAluno" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="telefoneAluno">Telefone</label>
+                        <input type="tel" id="telefoneAluno">
+                    </div>
+                </div>
+                <button type="button" class="action-button primary-button">Próxima Etapa</button>
+            </form>
+        </section>
+
+        <section id="selecao-curso" class="section-card">
+            <h3><i class="fas fa-graduation-cap"></i> Escolha do Curso e Turma</h3>
+
+            <form id="matriculaTurmaForm">
+        <div class="form-grid-2">
+
+                    <div class="input-group">
+                        <label for="cursoSelect">Curso Desejado</label>
+                        <select id="cursoSelect" required>
+                            <option value="">Selecione um Curso</option>
+                            <option value="1">Inglês Básico</option>
+                            <option value="2">Francês Avançado</option>
+                            <option value="3">Espanhol Intermediário</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="turmaSelect">Turma e Horário</label>
+                        <select id="turmaSelect" required disabled>
+                            <option value="">Selecione um Curso Primeiro</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group full-width">
+                        <label for="turmaDetalhes">Detalhes da Turma</label>
+                        <div class="details-box">Professor(a), Dias e Horários serão exibidos aqui.</div>
+                    </div>
+
+                </div>
+
+                <div class="button-group">
+                    <button type="button" class="action-button secondary-button">Voltar</button>
+                    <button type="submit" class="action-button primary-button">Confirmar e Ir para Pagamento</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+</div>
+
+</body>
+</html>
